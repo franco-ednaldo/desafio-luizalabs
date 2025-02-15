@@ -1,6 +1,5 @@
 package com.example.processfile.service.process;
 
-import com.example.processfile.enums.TextFormat;
 import com.example.processfile.exception.ErrorParserFile;
 import com.example.processfile.model.CustomerOrder;
 import com.example.processfile.model.Order;
@@ -14,7 +13,7 @@ import java.util.Map;
 import static com.example.processfile.enums.TextFormat.USER_ID;
 
 @Component
-public class ProcessTextFile implements ProcessFile {
+public class ProcessFileImpl implements ProcessFile {
 
     @Override
     public List<CustomerOrder> execute(final List<String> lines) {

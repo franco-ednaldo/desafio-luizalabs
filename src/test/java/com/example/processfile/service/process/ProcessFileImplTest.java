@@ -20,13 +20,13 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-class ProcessTextFileTest {
-    private ProcessTextFile processTextFile;
+class ProcessFileImplTest {
+    private ProcessFileImpl processFileImpl;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);
-        processTextFile = spy(new ProcessTextFile());
+        processFileImpl = spy(new ProcessFileImpl());
     }
 
     @Test
@@ -36,7 +36,7 @@ class ProcessTextFileTest {
         final var exceptedMessage = "File processing error";
 
         final var exception = Assertions.assertThrows(ErrorParserFile.class, ()-> {
-            processTextFile.execute(content);
+            processFileImpl.execute(content);
         });
 
         assertAll("Exception details",
@@ -53,7 +53,7 @@ class ProcessTextFileTest {
         final var expectedOrderId = 753l;
         final var expectedOrder = mockOrder();
         final var content = mockLine();
-        final var processTextFile = spy(new ProcessTextFile());
+        final var processTextFile = spy(new ProcessFileImpl());
 
         final var response = processTextFile.execute(content);
         assertEquals(1, response.size());

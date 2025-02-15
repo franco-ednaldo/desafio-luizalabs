@@ -3,7 +3,7 @@ package com.example.processfile.controller;
 import com.example.processfile.mapper.CustomerMapper;
 import com.example.processfile.mapper.CustomerMapperImpl;
 import com.example.processfile.service.OrderServiceImpl;
-import com.example.processfile.service.process.ProcessTextFile;
+import com.example.processfile.service.process.ProcessFileImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @WebMvcTest(OrderReaderController.class)
-@Import({OrderServiceImpl.class, ProcessTextFile.class, CustomerMapperImpl.class})
+@Import({OrderServiceImpl.class, ProcessFileImpl.class, CustomerMapperImpl.class})
 class OrderReaderControllerTest {
 
     @Autowired
