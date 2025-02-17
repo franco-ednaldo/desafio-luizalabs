@@ -16,4 +16,9 @@ Para executar é neessário subir o projeto local os seguinte comando deve ser e
     - Start da aplicação:
       > docker-compose up --build
 Ao executar a aplicação localmente, será criado uma imagem [Docker](https://www.docker.com/), caso não tenha o docker instalado segue o link: [instalar o Docker](https://docs.docker.com/install/)
-teswte setagdafg
+
+
+## Executar a Aplicação pelo swagger
+http://localhost:8881/swagger-ui/index.html
+
+

@@ -2,7 +2,7 @@ spring:
   application:
     name: process-file
 server:
-  port: 8881
+  port: 8080
 
 
 springdoc:
