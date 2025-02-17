@@ -1,0 +1,8 @@
+version: '3'
+services:
+  sua-api:
+    build:
+      context: .  # O contexto de build é o diretório atual
+      dockerfile: Dockerfile  # Nome do Dockerfile
+    ports:
+      - "8080:8080"  # Mapeamento da porta do contêiner para a porta do host
