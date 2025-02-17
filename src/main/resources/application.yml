@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: process-file
+server:
+  port: 8881
+
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
