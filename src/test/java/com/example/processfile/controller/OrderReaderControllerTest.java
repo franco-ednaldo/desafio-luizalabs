@@ -44,7 +44,6 @@ class OrderReaderControllerTest {
     @Test
     @DisplayName("Dado um arquivo válido, deve retornar status 200 e a lista de customers com seus orders")
     void givenAValidFileWhenCallApi_thenShouldReturnStatus200AndListCustomer() throws Exception {
-        // Carregar o arquivo de teste
         ClassPathResource resource = new ClassPathResource("order.txt");
         MockMultipartFile file = new MockMultipartFile(
                 "files", "order.txt", MediaType.TEXT_PLAIN_VALUE, resource.getInputStream()
@@ -58,8 +57,6 @@ class OrderReaderControllerTest {
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(8)))
-
-                // Validar um customer específico (Palmer Prosacco)
                 .andExpect(jsonPath("$[?(@.userId == 70)].name").value("Palmer Prosacco"));
     }
 
