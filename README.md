@@ -5,7 +5,7 @@ API que recebe um ou mais arquivos com informações de pedido fitos pelos os cl
 
 - [Java 17](https://docs.oracle.com/en/java/javase/17/)
 - [Spring Boot](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/)
-- [Maven](https://maven.apache.org/)
+- [Gradle](https://gradle.org/)
 - [Lombok](https://projectlombok.org/)
 - [Docker](https://projectlombok.org/)
 - [Docker-compose](https://docs.docker.com/compose/)
